@@ -28,7 +28,7 @@ the failure of the optimistic lock is reported via an OptimisticLockingFailureEx
 Clone the repository: `git clone https://github.com/devOceanblue/optimisticLocking-Proof-of-Concepts.git`
 
 ```shell
-docker-compose build --no-cache
+docker-compose up -d
 ```
 
 now you are all set.

@@ -74,7 +74,7 @@ public class UserRepositoryTest {
      */
     @Test
     @DisplayName("update user with @Query with version check")
-    public void updateUserWithQUeryAnnotationAndVersionCheck() {
+    public void updateUserWithQueryAnnotationAndVersionCheck() {
         // given
         UserEntity userEntity = userRepository.findById(USER_ID).get();
         String newName = UUID.randomUUID().toString();

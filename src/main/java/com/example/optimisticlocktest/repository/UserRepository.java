@@ -10,6 +10,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 public interface UserRepository extends JpaRepository<UserEntity, Long>{
+
+    /*
+    * This method doesn't throw OptimisticLockingFailureException when the version is not matched.
+     */
     @Transactional
     @Modifying(flushAutomatically = true, clearAutomatically = true)
     @Query("update UserEntity e set e.name = :name, e.version = :version+1L where e.id = :id AND e.version = :version")
